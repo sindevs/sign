@@ -23,9 +23,9 @@ export default [{
     },
     {
       _name: 'CSidebarNavDropdown',
-      name: 'ປະເພດປ້າຍ',
-      route: '/base',
-      icon: 'cil-user',
+      name: 'ລາຍການປ້າຍທັງໝົດ',
+      to: '/theme/colors',
+      icon: 'cilList',
       items: [{
           name: 'ປ້າຍທີ່ເຊົ້າ',
           to: '/base/breadcrumbs'
@@ -35,6 +35,13 @@ export default [{
           to: '/base/tooltips'
         }
       ]
+    },
+    {
+      _name: 'CSidebarNavDropdown',
+      name: 'ປະເພດປ້າຍ',
+      route: '/base',
+      icon: 'cil-user',
+
     },
     {
       _name: 'CSidebarNavItem',
