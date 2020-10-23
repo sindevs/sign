@@ -1,20 +1,24 @@
 <template>
-  <div id="App">
+  <div id="app">
+    <vue-progress-bar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "app",
 };
 </script>
 
 <style lang="scss">
-#App {
+#app {
   font-family: "NotoSansLao";
 }
-// Import Main styles for this application
+.swal2-popup {
+  font-family: "NotoSansLao";
+}
+
 @import "assets/scss/style";
 @import "assets/scss/font.scss";
 </style>

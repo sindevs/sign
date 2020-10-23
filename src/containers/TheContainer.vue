@@ -1,35 +1,35 @@
 <template>
   <div class="c-app">
-    <TheSidebar/>
+    <TheSidebar />
     <CWrapper>
-      <TheHeader/>
-      <div class="c-body">
-        <main class="c-main">
-          <CContainer fluid>
-            <transition name="fade">
-              <router-view></router-view>
-            </transition>
-          </CContainer>
-        </main>
+      <TheHeader />
+      <div class="c-body pt-3 pl-1">
+        <!-- <main class="c-main"> -->
+        <CContainer fluid>
+          <transition name="fade">
+            <router-view></router-view>
+          </transition>
+        </CContainer>
+        <!-- </main> -->
       </div>
-      <TheFooter/>
+      <TheFooter />
     </CWrapper>
   </div>
 </template>
 
 <script>
-import TheSidebar from './TheSidebar'
-import TheHeader from './TheHeader'
-import TheFooter from './TheFooter'
+import TheSidebar from "./TheSidebar";
+import TheHeader from "./TheHeader";
+import TheFooter from "./TheFooter";
 
 export default {
-  name: 'TheContainer',
+  name: "TheContainer",
   components: {
     TheSidebar,
     TheHeader,
-    TheFooter
-  }
-}
+    TheFooter,
+  },
+};
 </script>
 
 <style scoped>

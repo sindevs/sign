@@ -14,11 +14,10 @@ export default [{
       _name: 'CSidebarNavTitle',
       _children: ['ການຈັດການ']
     },
-
     {
       _name: 'CSidebarNavItem',
       name: 'ເພີ່ມລາຍການປ້າຍ',
-      to: '/theme/colors',
+      to: '/insertNewsign',
       icon: 'cilPlus'
     },
     {
@@ -27,25 +26,18 @@ export default [{
       to: '/theme/colors',
       icon: 'cilList',
       items: [{
-          name: 'ປ້າຍທີ່ເຊົ້າ',
-          to: '/base/breadcrumbs'
+          name: 'ປ້າຍທີ່ມີສັນຍາເຊົ່າ',
+          to: '/signManage/BankManage'
         },
         {
-          name: 'ປ້າຍຄູ້ມຄອງເອງ',
-          to: '/base/tooltips'
+          name: 'ປ້າຍທີ່ຄູ້ມຄອງເອງ',
+          to: '/signManage/BankManage'
         }
       ]
     },
     {
-      _name: 'CSidebarNavDropdown',
-      name: 'ປະເພດປ້າຍ',
-      route: '/base',
-      icon: 'cil-user',
-
-    },
-    {
       _name: 'CSidebarNavItem',
-      name: 'ກວດສອບລາຍການປ້າຍ',
+      name: 'ອະນູມັດລາຍການ',
       to: '/theme/colors',
       icon: 'cilPeople'
     },
@@ -54,8 +46,14 @@ export default [{
       _children: ['ການຕັ້ງຄ່າ']
     },
     {
+      _name: 'CSidebarNavItem',
+      name: 'ເພີ່ມຜູ້ໃຊ້',
+      to: '/InsertUser',
+      icon: 'cilPlus'
+    },
+    {
       _name: 'CSidebarNavDropdown',
-      name: 'ຂໍ້ມູນຜູ້ໃຊ້',
+      name: 'ການຈັດການຜູ້ໃຊ້',
       route: '/base',
       icon: 'cil-user',
       items: [{
@@ -67,6 +65,12 @@ export default [{
           to: '/base/tooltips'
         }
       ]
+    },
+    {
+      _name: 'CSidebarNavItem',
+      name: 'ອອກຈາກລະບົບ',
+      to: '/insertNewsign',
+      icon: 'cil-lock-locked'
     },
     {
       _name: 'CSidebarNavItem',

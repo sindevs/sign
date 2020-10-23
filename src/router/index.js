@@ -57,37 +57,62 @@ const Register = () => import('@/views/pages/Register')
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
+//Insert Sign
+const InsertSign = () => import('@/components/InsertSign/InsertSign.vue')
+
+//USER
+const InsertUser = () => import("@/components/User/InsertUser.vue")
+
+//ManageSign
+const BankManage = () => import('@/components/SignManagement/BankManageSign.vue')
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'hash', // https://router.vuejs.org/api/#mode
   linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0
+  }),
   routes: configRoutes()
 })
 
-function configRoutes () {
-  return [
-    {
+function configRoutes() {
+  return [{
       path: '/',
       redirect: '/dashboard',
-      name: 'Home',
+      name: 'ໜ້າຫຼັກ',
       component: TheContainer,
-      children: [
-        {
+      children: [{
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'insertNewsign',
+          name: 'ເພີ່ມລາຍການປ້າຍ',
+          component: InsertSign
+        },
+        {
+          path: 'InsertUser',
+          name: 'ເພີ່ມຜູ້ໃຊ້ພາຍໃນລະບົບ',
+          component: InsertUser
+        },
+        {
+          path: 'BankManage',
+          name: 'ຈັດການປ້າຍທີ່ຄູ້ມຄອງເອງ',
+          component: BankManage
         },
         {
           path: 'theme',
           redirect: '/theme/colors',
           name: 'Theme',
           component: {
-            render (c) { return c('router-view') }
+            render(c) {
+              return c('router-view')
+            }
           },
-          children: [
-            {
+          children: [{
               path: 'colors',
               name: 'Colors',
               component: Colors
@@ -119,8 +144,7 @@ function configRoutes () {
               return c('router-view')
             }
           },
-          children: [
-            {
+          children: [{
               path: '',
               name: 'Users',
               component: Users
@@ -136,14 +160,30 @@ function configRoutes () {
           ]
         },
         {
+          path: 'signManage',
+          redirect: '/signManage/BankManage',
+          name: 'ການຈັດການປ້າຍ',
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [{
+            path: 'BankManage',
+            name: 'ການຈັດການປ້າຍທີ່ຄູ້ມຄອງເອງ',
+            component: BankManage
+          }],
+        },
+        {
           path: 'base',
           redirect: '/base/cards',
           name: 'Base',
           component: {
-            render (c) { return c('router-view') }
+            render(c) {
+              return c('router-view')
+            }
           },
-          children: [
-            {
+          children: [{
               path: 'cards',
               name: 'Cards',
               component: Cards
@@ -230,10 +270,11 @@ function configRoutes () {
           redirect: '/buttons/standard-buttons',
           name: 'Buttons',
           component: {
-            render (c) { return c('router-view') }
+            render(c) {
+              return c('router-view')
+            }
           },
-          children: [
-            {
+          children: [{
               path: 'standard-buttons',
               name: 'Standard Buttons',
               component: StandardButtons
@@ -260,10 +301,11 @@ function configRoutes () {
           redirect: '/icons/coreui-icons',
           name: 'CoreUI Icons',
           component: {
-            render (c) { return c('router-view') }
+            render(c) {
+              return c('router-view')
+            }
           },
-          children: [
-            {
+          children: [{
               path: 'coreui-icons',
               name: 'Icons library',
               component: CoreUIIcons
@@ -285,10 +327,11 @@ function configRoutes () {
           redirect: '/notifications/alerts',
           name: 'Notifications',
           component: {
-            render (c) { return c('router-view') }
+            render(c) {
+              return c('router-view')
+            }
           },
-          children: [
-            {
+          children: [{
               path: 'alerts',
               name: 'Alerts',
               component: Alerts
@@ -312,10 +355,11 @@ function configRoutes () {
       redirect: '/pages/404',
       name: 'Pages',
       component: {
-        render (c) { return c('router-view') }
+        render(c) {
+          return c('router-view')
+        }
       },
-      children: [
-        {
+      children: [{
           path: '404',
           name: 'Page404',
           component: Page404
@@ -339,4 +383,3 @@ function configRoutes () {
     }
   ]
 }
-

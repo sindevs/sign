@@ -1,6 +1,14 @@
 @font-face {
-    font-family: "NotoSansLao";
-    src: local("NotoSansLao"),
-      url("./assets/fonts/NotoSansLao-Regular.ttf") format("truetype");
-  }
-  
+  font-family: "NotoSansLao";
+  src: local("NotoSansLao"),
+    url("./assets/fonts/NotoSansLao-Regular.ttf") format("truetype");
+}
+.swal2-content {
+  font-family: "NotoSansLao";
+}
+.swal2-title {
+  font-family: "NotoSansLao";
+}
+.swal2-container {
+  font-family: "NotoSansLao";
+}
